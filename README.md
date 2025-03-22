@@ -8,17 +8,17 @@ I setup Amazon Route 53 as the DNS provider and setup the alias records to point
 
 ![](.idea/images/EC2KeyPair.png)
 
-###Route 53 Settings:
+### Route 53 Settings:
 
 ![](.idea/images/Route53.png)
 
-###CloudFront Settings:
+### CloudFront Settings:
 
 ![](.idea/images/CloudFront.png)
 
 ![](.idea/images/CloudFront1.png)
 
-###Certificate Manager
+### Certificate Manager
 Request a public Certificate in the N. Virginia Region for anupamadhir.com
 and add the subdomains.
 ![](.idea/images/Request Cert.png)
@@ -26,7 +26,7 @@ and add the subdomains.
 Issued Certificate
 ![](.idea/images/ACM.png)
 
-###S3 Bucket
+### S3 Bucket
 Create 2 Buckets. The files are uploaded to anupamadhir.com and www.anupamadhir.com redirects request to anupamadhir.com bucket.
 ![](.idea/images/S3 Buckets.png)
 
