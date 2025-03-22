@@ -35,6 +35,8 @@ Under Bucket Permissions turned on Block public access
 
 ![](.idea/images/S3BucketPermissions.png)
 
+
+
 Enabled static website hosting for bucket
 
 ![](.idea/images/S3BucketProperties.png)
