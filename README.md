@@ -31,13 +31,14 @@ Created 2 Buckets. The files are uploaded to anupamadhir.com and www.anupamadhir
 
 ![](.idea/images/S3Buckets.png)
 
-Under Bucket Permissions turned on Block public access
+#### Under Bucket Permissions turned on Block public access
 
 ![](.idea/images/S3BucketPermissions.png)
 
 
 
-Enabled static website hosting for bucket
+
+#### Enabled static website hosting for bucket
 
 ![](.idea/images/S3BucketProperties.png)
 
