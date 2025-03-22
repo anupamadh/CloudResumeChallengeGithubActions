@@ -28,11 +28,14 @@ Issued Certificate
 
 ### S3 Bucket
 Created 2 Buckets. The files are uploaded to anupamadhir.com and www.anupamadhir.com redirects request to anupamadhir.com bucket.
+
 ![](.idea/images/S3Buckets.png)
 
 Under Bucket Permissions turned on Block public access
+
 ![](.idea/images/S3BucketPermissions.png)
 
-Enable static website hosting for bucket
+Enabled static website hosting for bucket
+
 ![](.idea/images/S3BucketProperties.png)
 
