@@ -6,6 +6,11 @@ I used HTML and CSS to build a responsive web page and hosted it in an S3 bucket
 I bought the domain name from Namecheap and used Amazon Certificate Manager to generate an SSL certificate to enable https on my website.
 I setup Amazon Route 53 as the DNS provider and setup the alias records to point to the CloudFront Distribution.
 
+[Route 53 Settings](#Route 53 Settings:)  
+[CloudFront Settings](#CloudFront Settings:)  
+[Certificate Manager](#Certificate Manager:)  
+[S3 Bucket](#S3 Bucket:)
+
 ![](.idea/images/EC2KeyPair.png)
 
 ### Route 53 Settings:
@@ -18,7 +23,7 @@ I setup Amazon Route 53 as the DNS provider and setup the alias records to point
 
 ![](.idea/images/CloudFront1.png)
 
-### Certificate Manager
+### Certificate Manager:
 Request a public Certificate in the N. Virginia Region for anupamadhir.com
 and add the subdomains.
 ![](.idea/images/RequestCert.png)
@@ -26,7 +31,7 @@ and add the subdomains.
 Issued Certificate
 ![](.idea/images/ACM.png)
 
-### S3 Bucket
+### S3 Bucket:
 Created 2 Buckets. The files are uploaded to anupamadhir.com and www.anupamadhir.com redirects request to anupamadhir.com bucket.
 <br>
 ![](.idea/images/S3Buckets.png)
