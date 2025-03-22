@@ -21,18 +21,18 @@ I setup Amazon Route 53 as the DNS provider and setup the alias records to point
 ### Certificate Manager
 Request a public Certificate in the N. Virginia Region for anupamadhir.com
 and add the subdomains.
-![](.idea/images/Request Cert.png)
+![](.idea/images/RequestCert.png)
 
 Issued Certificate
 ![](.idea/images/ACM.png)
 
 ### S3 Bucket
 Create 2 Buckets. The files are uploaded to anupamadhir.com and www.anupamadhir.com redirects request to anupamadhir.com bucket.
-![](.idea/images/S3 Buckets.png)
+![](.idea/images/S3Buckets.png)
 
 Under Bucket Permissions turned on Block public access
-![](.idea/images/S3 Bucket Permissions.png)
+![](.idea/images/S3BucketPermissions.png)
 
 Enable static website hosting for bucket
-![](.idea/images/S3 Bucket Properties.png)
+![](.idea/images/S3Bucket Properties.png)
 
