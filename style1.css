@@ -222,3 +222,9 @@ a {
     color: #fff;
     font-weight: 300;
 }
+
+.counter-number{
+    text-align: left;
+    margin-top: 5px;
+    color: #03a9f4;
+}
