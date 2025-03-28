@@ -63,7 +63,7 @@ _Lambda -> DynamoDB_
 
 To update the views in the website, we need to connect the frontend to the backend infrastructure.  
 I created and deployed a REST API using API Gateway for this purpose and added a javascript to the website to get the views using the API Gateway.
-I spent a considerable amount of time getting the javascript to communicate with DynamoDB via the API Gateway.  
+I spent a considerable amount of time getting the javascript to communicate with DynamoDB via the API Gateway. I resolved this issue by enabling CORS on API Gateway.
 
 ![](.idea/images/APIGateway.png)
 
