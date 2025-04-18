@@ -7,13 +7,14 @@ terraform {
   }
 }
 provider "aws" {
-  profile = "default"
+  profile = "prod"
   region  = "ap-southeast-1"
 }
 
 # Referencing frontend module
 module "frontend" {
   source = "./modules/frontend"
+  cf_id = module.frontend.cf_id
 }
 
 # Referencing backend module

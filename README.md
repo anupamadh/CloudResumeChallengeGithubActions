@@ -1,20 +1,56 @@
 # Cloud Resume Challenge
 
-## Week 1 Challenge
 
-### Website Frontend  
+
+### Overview  
 
 Create a cloud-hosted resume as the frontend of the application. You can find my [resume](https://anupamadhir.com) here.
 I used HTML and CSS to build a responsive web page and hosted it in an S3 bucket as a static website behind a CloudFront(CDN) distribution.
 I bought the domain name from Namecheap and used Amazon Certificate Manager to generate an SSL certificate to enable https on my website.
-I setup Amazon Route 53 as the DNS provider and setup the alias records to point to the CloudFront Distribution.
+I setup Amazon Route 53 as the DNS provider and setup the alias records to point to the CloudFront Distribution.I have setup CloudFront cache invalidation.  
+
+## Features
+
+Website Hosting: A resume website hosted in an S3 bucket and distributed globally through CloudFront with Origin Access Control (OAC).
+Custom Domain: Route 53 manages domain name configurations.
+Visitor Tracking: Tracks website visitors using a serverless backend with REST API Gateway, Lambda, and DynamoDB.
+Infrastructure as Code: Utilizes Terraform to provision and manage AWS resources.  
+
+## Project Architecture
 
 ![](.idea/images/Terraform-3.drawio.png)
 
 
-### Route 53 Settings:
+## Project Structure:
 
-![](.idea/images/Route53.png)
+    .
+    ├── README.md
+    ├── frontend
+    │   ├── index2.html
+    │   ├── index2.js
+    │   └── style2.css
+    ├── terraform
+    │   ├── main.tf
+    │   ├── modules
+    │   │   ├── backend
+    │   │   │   ├── apigateway.tf
+    │   │   │   ├── dynamodb.tf
+    │   │   │   ├── lambda
+    │   │   │   │   ├── lambda_function.py
+    │   │   │   │   ├── lambda_function.zip
+    │   │   │   │   ├── update_count.py
+    │   │   │   │   └── update_count.zip
+    │   │   │   └── lambda.tf
+    │   │   └── frontend
+    │   │       ├── bucketpolicy.tf
+    │   │       ├── cloudfront.tf
+    │   │       ├── s3.tf
+    │   │       └── variables.tf
+ 
+    7 directories, 19 files
+
+
+
 
 ### CloudFront Settings:
 

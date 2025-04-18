@@ -14,11 +14,15 @@ resource "aws_cloudfront_origin_access_control" "crc_oac" {
 
 resource "aws_cloudfront_distribution" "crc_distribution" {
   origin {
-    domain_name              = aws_s3_bucket.the-cloud-resume-challenge-terraform-anu.bucket_regional_domain_name
+    domain_name              = aws_s3_bucket.the-cloud-resume-challenge-terraform-anu-ghactions.bucket_regional_domain_name
     origin_access_control_id = aws_cloudfront_origin_access_control.crc_oac.id
     origin_id                = local.s3_origin_id
   }
 
+  provisioner "local-exec" {
+    command = "aws cloudfront create-invalidation --distribution-id ${self.id} --paths '...'"
+  }
+  
   enabled             = true
   is_ipv6_enabled     = true
   comment             = "Starting point of the static website in the S3 bucket"
@@ -106,4 +110,8 @@ resource "aws_cloudfront_distribution" "crc_distribution" {
 output "cf-domain" {
   description = "CF domain"
   value = aws_cloudfront_distribution.crc_distribution.domain_name
+}
+
+output "cf_id" {
+  value = aws_cloudfront_distribution.crc_distribution.id
 }

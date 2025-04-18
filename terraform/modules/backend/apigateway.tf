@@ -54,3 +54,10 @@ resource "aws_api_gateway_method_settings" "count_api_settings" {
         throttling_burst_limit = 25 # Burst requests
  }
 }
+
+  output "api_gateway_url" {
+     value = "${aws_api_gateway_deployment.count_api_deployment.invoke_url}"
+     depends_on = [
+    aws_api_gateway_deployment.count_api_deployment,
+  ]
+   }

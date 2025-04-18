@@ -3,7 +3,7 @@ from decimal import Decimal
 
 # Initialize the DynamoDB client
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('visitors-count-terraform')
+table = dynamodb.Table('visitors-count-terraform-ghactions')
 
 def convert_decimal(obj):
     if isinstance(obj, Decimal):

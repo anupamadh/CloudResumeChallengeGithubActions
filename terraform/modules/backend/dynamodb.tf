@@ -57,7 +57,7 @@ ITEM
 }
 
 resource "aws_dynamodb_table" "crc-dynamodb-table" {
-  name           = "visitors-count-terraform"
+  name           = "visitors-count-terraform-ghactions"
   billing_mode   = "PROVISIONED"
   read_capacity  = 1
   write_capacity = 1
