@@ -45,6 +45,7 @@ Infrastructure as Code: Utilizes Terraform to provision and manage AWS resources
     │   │       ├── bucketpolicy.tf
     │   │       ├── cloudfront.tf
     │   │       ├── s3.tf
+    │   │       ├── dns.tf
     │   │       └── variables.tf
  
     7 directories, 19 files
@@ -52,11 +53,20 @@ Infrastructure as Code: Utilizes Terraform to provision and manage AWS resources
 
 
 
-### CloudFront Settings:
+### Explanation of Directories and Files:
 
-![](.idea/images/CloudFront.png)
+**frontend/**: Contains the website files  
+    - index2.html: Main HTML file for the website  
+    - script2.js: Javascript file for interacting with API  
+    - style2.css: Stylesheet for website  
+**terraform/**: Contains Terraform configuration files for provisioning AWS resources.  
+    - main.tf: Contains the main set of configuration for the modules. It also contains the AWS provider settings.
+    - modules/:
+        - backend/: Provisions REST API Gateway, DynamoDB, and Lambda for visitor tracking. The Lambda function updates and fetches visitor counts from the DynamoDB table.  
+        - frontend/: Provisions S3, CloudFront, Cloudfront cloud invalidation and Route 53 for website hosting and DNS management.
 
-![](.idea/images/CloudFront1.png)
+    
+    
 
 ### Certificate Manager:
 Request a public Certificate in the N. Virginia Region for anupamadhir.com
