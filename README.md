@@ -61,9 +61,9 @@ Infrastructure as Code: Utilizes Terraform to provision and manage AWS resources
   * style2.css: Stylesheet for website  
 - **terraform/**: Contains Terraform configuration files for provisioning AWS resources.  
    * main.tf: Contains the main set of configuration for the modules. It also contains the AWS provider settings.
-   * modules/:
-          * backend/: Provisions REST API Gateway, DynamoDB, and Lambda for visitor tracking. The Lambda function updates and fetches visitor counts from the DynamoDB table.  
-          * frontend/: Provisions S3, CloudFront, Cloudfront cloud invalidation and Route 53 for website hosting and DNS management.
+   * modules/:  
+     * backend/: Provisions REST API Gateway, DynamoDB, and Lambda for visitor tracking. The Lambda function updates and fetches visitor counts from the DynamoDB table.
+     * frontend/: Provisions S3, CloudFront, Cloudfront cloud invalidation and Route 53 for website hosting and DNS management.
    
 ### Certificate Manager:
 Request a public Certificate in the N. Virginia Region for anupamadhir.com
