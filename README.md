@@ -64,61 +64,24 @@ Infrastructure as Code: Utilizes Terraform to provision and manage AWS resources
      * backend/: Provisions REST API Gateway, DynamoDB, and Lambda for visitor tracking. The Lambda function updates and fetches visitor counts from the DynamoDB table.
      * frontend/: Provisions S3, CloudFront and Cloudfront cloud invalidation
    
-### Certificate Manager:
-Request a public Certificate in the N. Virginia Region for anupamadhir.com
-and add the subdomains.
-![](.idea/images/RequestCert.png)
+## Implementation Details:
+1. **Website Hosting**  
+    **Technology:** S3 and CloudFront  
+    **Details:** The website is hosted in an S3 bucket and delivered globally using CloudFront(CDN) with Origin Access Control (OAC).  
 
-Issued Certificate
-![](.idea/images/ACM.png)
-
-### S3 Bucket:
-Created 2 Buckets. The files are uploaded to anupamadhir.com and www.anupamadhir.com redirects request to anupamadhir.com bucket.
-<br>
-![](.idea/images/S3Buckets.png)
-
-<br>
-
-#### Under Bucket Permissions turned on Block public access
-
-![](.idea/images/S3BucketPermissions.png)
-
+2. **Visitor Tracking**
+   **Technology:** REST API Gateway, Lambda, DynamoDB  
+   **Details:**   
+   + API Gateway triggers the Lambda function.  
+   + The Lambda function updates the visitor count in a DynamoDB table and fetches the count for display.
+   
+3. **Infrastructure as Code (IaC)**
+   **Technology:** Terraform  
+   **Details:** All resources are managed as code, enabling version control and consistency across different environments.
 
 <br>
 
-#### Enabled static website hosting for bucket
+## Future Improvements
+1. Include a CI/CD pipeline using GitHub Actions to automate the deployment of website updates.
 
-![](.idea/images/S3BucketProperties.png)
-
-_Route 53 → Cloudfront → Certificate Manager → S3 bucket_
-
-## Week 2 Challenge
-
-### Backend Infrastructure  
-
-The resume website should show the number of views. I wrote a lambda function in Python to update and fetch the number of views.  
-
-The application flow upto this point is:  
-
-_Lambda -> DynamoDB_  
-
-### Connecting Frontend to Backend  
-
-To update the views in the website, we need to connect the frontend to the backend infrastructure.  
-I created and deployed a REST API using API Gateway for this purpose and added a javascript to the website to get the views using the API Gateway.
-I spent a considerable amount of time getting the javascript to communicate with DynamoDB via the API Gateway. I resolved this issue by enabling CORS on API Gateway.
-
-![](.idea/images/APIGateway.png)
-
-The application flow upto this point is:  
-
-_Route 53 → Cloudfront → Certificate Manager → S3 bucket → API Gateway →Lambda → DynamoDB_
-
-## Week 3 Challenge
-
-I terraformed my Cloud Resume Challenge. 
-Terraform is an Infrastructure-as-Code(IAC) tool which I used to provision the AWS resources used in my website. I used frontend and backend modules to logically group my resources.  
-This was a totally new area for me and I encountered issues running Terraform apply which I fixed by using iamadmin user since using an assumed role was the cause root cause of the problem.  
-I also got errors since I needed to stringify the json response from the lambda function since I used Lambda Proxy integration in the API Gateway.
-
-![](.idea/images/Malformedjson.png)
+<br>
