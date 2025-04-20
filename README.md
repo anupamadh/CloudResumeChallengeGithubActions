@@ -6,8 +6,8 @@
 
 Create a cloud-hosted resume as the frontend of the application. You can find my [resume](https://anupamadhir.com) here.
 I used HTML and CSS to build a responsive web page and hosted it in an S3 bucket behind a CloudFront(CDN) distribution.
-Here is the resume deployed to CloudFront using Terraform [CloudFront Resume](https://de1n5o2n269bm.cloudfront.net/)
-I have setup CloudFront cache invalidation.  
+Here is the resume deployed to CloudFront using Terraform [CloudFront Resume](https://de1n5o2n269bm.cloudfront.net/).
+I have also setup CloudFront cache invalidation.  
 
 ## Features
 
