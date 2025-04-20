@@ -8,7 +8,7 @@
     
 }
 body {
-    background-color: lightblue;
+    background-color: rgb(230, 173, 203);
     display: flex;
     justify-content: center;
     align-items: center;
