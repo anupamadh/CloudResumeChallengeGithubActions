@@ -69,11 +69,11 @@ Infrastructure as Code: Utilizes Terraform to provision and manage AWS resources
     **Technology:** S3 and CloudFront  
     **Details:** The website is hosted in an S3 bucket and delivered globally using CloudFront(CDN) with Origin Access Control (OAC).  
 
-2. **Visitor Tracking**
+2. **Visitor Tracking**  
    **Technology:** REST API Gateway, Lambda, DynamoDB  
-   **Details:**  
-    * API Gateway triggers the Lambda function.
-    * The Lambda function updates the visitor count in a DynamoDB table and fetches the count for display.
+   **Details:** 
+   * API Gateway triggers the Lambda function.
+   * The Lambda function updates the visitor count in a DynamoDB table and fetches the count for display.
     
 3. **Infrastructure as Code (IaC)** 
    **Technology:** Terraform  
