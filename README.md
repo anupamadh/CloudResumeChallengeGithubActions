@@ -71,9 +71,9 @@ Infrastructure as Code: Utilizes Terraform to provision and manage AWS resources
 
 2. **Visitor Tracking**
    **Technology:** REST API Gateway, Lambda, DynamoDB  
-   **Details:**
-   + API Gateway triggers the Lambda function.  
-   + The Lambda function updates the visitor count in a DynamoDB table and fetches the count for display.
+   **Details:**  
+   * API Gateway triggers the Lambda function.  
+   * The Lambda function updates the visitor count in a DynamoDB table and fetches the count for display.
    
 3. **Infrastructure as Code (IaC)**
    **Technology:** Terraform  
