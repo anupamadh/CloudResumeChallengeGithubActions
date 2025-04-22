@@ -17,7 +17,7 @@ Infrastructure as Code: Utilizes Terraform to provision and manage AWS resources
 
 ## Project Architecture
 
-![](.idea/images/Terraform-2.png)
+![](.idea/images/Terraform-3.png)
 
 
 ## Project Structure:
