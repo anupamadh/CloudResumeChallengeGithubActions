@@ -81,6 +81,7 @@ Infrastructure as Code: Utilizes Terraform to provision and manage AWS resources
 <br>
 
 ## Future Improvements
-1. Include a CI/CD pipeline using GitHub Actions to automate the deployment of website updates.
+1. Include monitoring in the Terraform modules.
+2. Implement an option to download the reusme.
 
 <br>
