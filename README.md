@@ -76,7 +76,10 @@ Infrastructure as Code: Utilizes Terraform to provision and manage AWS resources
     
 3. **Infrastructure as Code (IaC)**   
    **Technology:** Terraform  
-   **Details:** All resources are managed as code, enabling version control and consistency across different environments.
+   **Details:** All resources are managed as code, enabling version control and consistency across different environments.  
+
+4. **CI/CD Pipeline:** GitHub Actions automates the deployment process for updates to the frontend.  
+
 
 <br>
 
