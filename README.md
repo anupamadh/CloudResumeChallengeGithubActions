@@ -11,9 +11,10 @@ I have also setup CloudFront cache invalidation.
 
 ## Features
 
-Website Hosting: A resume website hosted in an S3 bucket and distributed globally through CloudFront with Origin Access Control (OAC).
-Visitor Tracking: Tracks website visitors using a serverless backend with REST API Gateway, Lambda, and DynamoDB.
+Website Hosting: A resume website hosted in an S3 bucket and distributed globally through CloudFront with Origin Access Control (OAC).  
+Visitor Tracking: Tracks website visitors using a serverless backend with REST API Gateway, Lambda, and DynamoDB.  
 Infrastructure as Code: Utilizes Terraform to provision and manage AWS resources.  
+CI/CD pipeline: Uses Github Actions to automate workflows.  
 
 ## Project Architecture
 
