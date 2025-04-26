@@ -18,7 +18,7 @@ CI/CD pipeline: Uses Github Actions to automate workflows.
 
 ## Project Architecture
 
-![](.idea/images/Terraform-3.png)
+![](.idea/images/Terraform-4.png)
 
 
 ## Project Structure:
